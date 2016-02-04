@@ -1,0 +1,13 @@
+.dockerignore
+Dockerfile
+Guardfile
+.gitignore
+.git
+.rspec
+.rubocop.yml
+.env
+spec
+tmp/*
+log/*
+!log/.keep
+vendor/*

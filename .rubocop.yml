@@ -1,0 +1,14 @@
+AllCops:
+  Exclude:
+    - 'vendor/**/*'
+    - 'db/schema.rb'
+    - 'bin/**/*'
+Lint/Debugger:
+  AutoCorrect: false
+Metrics/LineLength:
+  Exclude:
+    - 'spec/**/*'
+    - 'config/**/*.rb'
+    - 'db/**/*'
+Style/Documentation:
+  Enabled: false

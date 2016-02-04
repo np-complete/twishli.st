@@ -1,0 +1,16 @@
+!!! 5
+%title Twishli.st
+= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+= javascript_include_tag 'application', 'data-turbolinks-track' => true
+= csrf_meta_tags
+
+.container
+  .jumbotron
+    %h1 Twishli.st
+    %p
+      = fa_icon 'twitter 2x'
+      = fa_icon 'arrow-right 2x'
+      = fa_icon 'amazon 2x'
+      = fa_icon 'gift 2x'
+      = fa_icon 'list 2x'
+  = yield

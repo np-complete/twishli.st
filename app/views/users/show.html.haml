@@ -1,0 +1,21 @@
+- if notice
+  .alert.alert-success
+    = notice
+= form_for current_user, url: user_path,  method: :put do |f|
+  .form-group.form-group-lg
+    .input-group
+      .input-group-addon
+        = fa_icon 'twitter 2x'
+      %input.form-control{value: "https://twishli.st/#{current_user.screen_name}", disabled: true}
+
+  .form-group
+    = fa_icon 'arrow-down 4x'
+
+  .form-group.form-group-lg
+    .input-group
+      .input-group-addon
+        = fa_icon 'amazon 2x'
+      = f.text_field :url, placeholder: 'http://www.amazon.co.jp/registry/wishlist/1M1A2QYCBSGQ9', class: 'form-control input-2x'
+
+  .form-group
+    = f.submit class: 'btn btn-success btn-xlarge'

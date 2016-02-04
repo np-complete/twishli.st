@@ -1,0 +1,13 @@
+.lead.text-center
+  Shorten your #{fa_icon 'amazon'} wishlist URL to
+
+  %p
+    %code
+      https://twishli.st/{your_#{fa_icon 'twitter'}_id}
+
+  %p
+    = link_to 'Start Twishli.st', user_omniauth_authorize_url(:twitter), class: 'btn btn-lg btn-success'
+
+.text-center
+  Sample:
+  = link_to wishlist_url('masarakki'), wishlist_url('masarakki')
