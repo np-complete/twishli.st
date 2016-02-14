@@ -17,5 +17,10 @@ RSpec.describe User, type: :model do
       let(:url) { 'http://www.amazon.com/registry/wishlist/hoge' }
       it { is_expected.not_to be_valid }
     end
+
+    context 'format' do
+      let(:url) { 'http://www.amazon.com/registry/wishlist/1M1A2QYCBSGQ9/?hello=world' }
+      it { is_expected.to be_valid }
+    end
   end
 end
