@@ -7,7 +7,8 @@ ADD Gemfile /opt/Gemfile
 ADD Gemfile.lock /opt/Gemfile.lock
 RUN bundle install --path vendor/bundle --deployment --without development test
 ADD . /opt
-RUN bundle exec rake assets:precompile
 
-CMD bundle exec rails s -e production -b 0.0.0.0
+CMD bundle exec rake db:migrate && \
+    bundle exec rake assets:precompile && \
+    bundle exec rails s -e production -b 0.0.0.0
 EXPOSE 3000
