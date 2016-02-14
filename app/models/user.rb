@@ -11,4 +11,12 @@ class User < ActiveRecord::Base
       user.screen_name = auth.info.nickname
     end
   end
+
+  def url=(value)
+    uri = URI.parse(value).tap do |x|
+      x.query = nil
+      x.path = x.path[0..-2] if x.path =~ %r{/\Z}
+    end
+    super(uri.to_s)
+  end
 end
