@@ -1,16 +1,16 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.5.1'
+gem 'rails', '~> 5.0.0'
 gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails', '~> 4.2.0'
 gem 'faml'
 gem 'therubyracer', platforms: :ruby
 
 gem 'jquery-rails'
-gem 'turbolinks'
-gem 'jbuilder', '~> 2.0'
+gem 'turbolinks', '~> 5'
+gem 'jbuilder', '~> 2.5'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'omniauth-twitter'
@@ -27,6 +27,8 @@ group :development, :test do
 end
 
 group :development do
-  gem 'web-console', '~> 2.0'
+  gem 'web-console'
+  gem 'listen', '~> 3.0.5'
   gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
