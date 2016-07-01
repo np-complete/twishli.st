@@ -1,0 +1,25 @@
+{
+  "ignored_warnings": [
+    {
+      "warning_type": "Redirect",
+      "warning_code": 18,
+      "fingerprint": "75683052d85c44b73393490f0dc711bcaa4e445856b88fcab492edd2210bc2a7",
+      "message": "Possible unprotected redirect",
+      "file": "app/controllers/top_controller.rb",
+      "line": 8,
+      "link": "http://brakemanscanner.org/docs/warning_types/redirect/",
+      "code": "redirect_to(User.find_by(:screen_name => params[:id]).url)",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "TopController",
+        "method": "show"
+      },
+      "user_input": "User.find_by(:screen_name => params[:id]).url",
+      "confidence": "High",
+      "note": ""
+    }
+  ],
+  "updated": "2016-07-02 04:24:21 +0900",
+  "brakeman_version": "3.3.2"
+}
